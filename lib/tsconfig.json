@@ -1,0 +1,14 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["vitest/globals"],
+    "resolveJsonModule": true,
+    "alwaysStrict": false,
+    "noImplicitUseStrict": true,
+    "ignoreDeprecations": "5.0"
+  },
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"]
+}

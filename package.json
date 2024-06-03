@@ -1,0 +1,25 @@
+{
+  "name": "@unleash/nextjs-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "lib",
+    "example",
+    "common/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
