@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps<Data> = async (_ctx) => {
 
   return {
     props: {
-      isEnabled: flags.isEnabled("nextjs-example"),
+      isEnabled: flags.isEnabled("EnableImpel"),
       variant: flags.getVariant("nextjs-example"),
     },
   };

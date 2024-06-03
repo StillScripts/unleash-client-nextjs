@@ -84,7 +84,7 @@ const getFlag = async () => {
   });
   const flags = flagsClient(toggles);
 
-  return flags.isEnabled("nextjs-example");
+  return flags.isEnabled("EnableImpel");
 };
 
 export default async function Page() {
@@ -198,7 +198,7 @@ export const getStaticProps: GetStaticProps<Data> = async (_ctx) => {
 
   return {
     props: {
-      isEnabled: flags.isEnabled("nextjs-example"),
+      isEnabled: flags.isEnabled("EnableImpel"),
       variant: flags.getVariant("nextjs-example"),
     },
   };
@@ -248,7 +248,7 @@ export const getServerSideProps: GetServerSideProps<Data> = async (ctx) => {
 
   return {
     props: {
-      isEnabled: flags.isEnabled("nextjs-example")
+      isEnabled: flags.isEnabled("EnableImpel"),
     },
   };
 };

@@ -1,8 +1,4 @@
-import {
-  evaluateFlags,
-  flagsClient,
-  getDefinitions,
-} from "@unleash/nextjs";
+import { evaluateFlags, flagsClient, getDefinitions } from "@unleash/nextjs";
 import type { NextRequest } from "next/server";
 export const runtime = "edge";
 export const preferredRegion = "fra1";
@@ -33,7 +29,7 @@ export async function GET(request: NextRequest) {
         activeToggles: toggles.length,
         exampleToggle: {
           url: "https://app.unleash-hosted.com/demo/projects/default/features/nextjs-example",
-          isEnabled: flags.isEnabled("nextjs-example"),
+          isEnabled: flags.isEnabled("EnableImpel"),
           variant: flags.getVariant("nextjs-example"),
         },
       }),
@@ -55,4 +51,4 @@ export async function GET(request: NextRequest) {
       }
     );
   }
-};
+}

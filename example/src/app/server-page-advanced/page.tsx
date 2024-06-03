@@ -33,7 +33,7 @@ const getData = async () => {
     const flags = flagsClient(toggles);
 
     return {
-      isEnabled: flags.isEnabled("nextjs-example"),
+      isEnabled: flags.isEnabled("EnableImpel"),
       count: definitions?.features?.length || 0,
       sessionId,
     };
